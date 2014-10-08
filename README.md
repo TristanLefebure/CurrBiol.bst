@@ -2,3 +2,20 @@ CurrBiol.bst
 ============
 
 Bibtex .bst file for the current biology journal
+Should be used with natbib:
+
+
+--------------
+\documentclass{article}
+\usepackage[numbers,sort&compress]{natbib}
+\renewcommand{\bibnumfmt}[1]{#1.}
+\bibliographystyle{currbiol}
+------------------
+
+
+
+For the supplemental use:
+
+\renewcommand\refname{Supplemental References}
+\renewcommand{\bibnumfmt}[1]{S#1.}
+\renewcommand{\citenumfont}[1]{S#1}
